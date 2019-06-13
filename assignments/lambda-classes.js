@@ -3,7 +3,7 @@
 class Person {
     constructor(properties) {
         this.name = properties.name;
-        this.age = properties.name;
+        this.age = properties.age;
         this.location = properties.location;
     };
     speak() {
@@ -64,7 +64,14 @@ const joseph = new Person({
     location: 'Hollywood, CA'
 });
 
+const eli = new Person({
+    name: 'Eli',
+    age: 29,
+    location: 'Orlando, FL'
+});
+
 joseph.speak();
+eli.speak();
 
 const james = new Instructor({
     name: 'James',
@@ -75,8 +82,18 @@ const james = new Instructor({
     catchPhrase: 'Wubalubbadubdub!'
 });
 
-james.demo('CSS');
+const sharon = new Instructor({
+    name: 'Sharon',
+    age: 41,
+    location: 'Denver, CO',
+    specialty: 'JavaScript',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'A bird in the hand is probably gonna try to get out.'
+});
+
+sharon.demo('CSS');
 james.grade(joseph, 'HTML');
+console.log(sharon.catchPhrase);
 
 const lily = new Student({
     name: 'Lily',
@@ -87,6 +104,37 @@ const lily = new Student({
     favSubjects: ['HTML', 'CSS', 'JavaScript']
 });
 
-lily.listsSubjects();
+const levi = new Student({
+    name: 'Levi',
+    age: 24,
+    location: 'Ogden, UT',
+    background: 'Customer Service',
+    className: 'WEB21',
+    favSubjects: ['HTML', 'CSS', 'JavaScript', 'Python']
+});
+
+
+levi.listsSubjects();
 lily.PRAssignment('Intro to Computer Science');
 lily.sprintChallenge('Intro to Computer Science');
+console.log(levi.location);
+
+const maggie = new ProjectManager({
+    name: 'Maggie',
+    age: 24,
+    location: 'Albany, NY',
+    gradClassName: 'WEB12',
+    favInstructor: 'James'
+});
+
+const jenni = new ProjectManager({
+    name: 'Jenni',
+    age: 27,
+    location: 'San Francisco, CA',
+    gradClassName: 'WEB14',
+    favInstructor: 'Sharon'
+});
+
+jenni.standUp('WEB21_Jenni');
+maggie.debugsCode(lily, 'JavaScript');
+console.log(jenni.age);
