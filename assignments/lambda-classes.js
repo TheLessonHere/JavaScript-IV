@@ -57,3 +57,36 @@ class ProjectManager extends Instructor {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     };
 };
+
+const joseph = new Person({
+    name: 'Joseph',
+    age: 25,
+    location: 'Hollywood, CA'
+});
+
+joseph.speak();
+
+const james = new Instructor({
+    name: 'James',
+    age: 30,
+    location: 'Phoenix, AZ',
+    specialty: 'React',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'Wubalubbadubdub!'
+});
+
+james.demo('CSS');
+james.grade(joseph, 'HTML');
+
+const lily = new Student({
+    name: 'Lily',
+    age: 22,
+    location: 'Austin, TX',
+    background: 'Worked retail',
+    className: 'WEB21',
+    favSubjects: ['HTML', 'CSS', 'JavaScript']
+});
+
+lily.listsSubjects();
+lily.PRAssignment('Intro to Computer Science');
+lily.sprintChallenge('Intro to Computer Science');
