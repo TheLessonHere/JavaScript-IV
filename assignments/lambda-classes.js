@@ -42,4 +42,18 @@ class Student extends Person {
     sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
     };
-}
+};
+
+class ProjectManager extends Instructor {
+    constructor(properties) {
+        super(properties);
+        this.gradClassName = properties.gradClassName;
+        this.favInstructor = properties.favInstructor;
+    };
+    standUp(channel) {
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+    };
+    debugsCode(student, subject) {
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+    };
+};
